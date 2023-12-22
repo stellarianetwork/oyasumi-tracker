@@ -1,11 +1,11 @@
 {
-  "version": "2",
+  "version": "3",
   "remote": {
     "https://deno.land/std@0.188.0/collections/filter_values.ts": "5b9feaf17b9a6e5ffccdd36cf6f38fa4ffa94cff2602d381c2ad0c2a97929652",
     "https://deno.land/std@0.188.0/collections/without_all.ts": "a89f5da0b5830defed4f59666e188df411d8fece35a5f6ca69be6ca71a95c185",
     "https://deno.land/std@0.188.0/dotenv/load.ts": "0636983549b98f29ab75c9a22a42d9723f0a389ece5498fe971e7bb2556a12e2",
     "https://deno.land/std@0.188.0/dotenv/mod.ts": "f5a8123741d1561ae8184a7f043bc097b15132c5171c651142b804b6dbc21853",
-    "https://esm.sh/masto@6.2.0?bundle": "0eb646789d5fef81e5dbc95e015a75db41c6f26bbb4513338ea20e44ec705bf2",
-    "https://esm.sh/v132/masto@6.2.0/denonext/masto.bundle.mjs": "0d1687a1b106a744434abf6a2b43f1b6471c93191d818c2f6ba769fbeb2d6db4"
+    "https://esm.sh/masto@6.2.0?bundle": "24d25691a56f3c026702eb338ac7d331616ec5450fb22d1a07bd4fc8c5478378",
+    "https://esm.sh/v135/masto@6.2.0/denonext/masto.bundle.mjs": "663bb63e5aae50a3379110fad7c87fda01222986f8f68c6c6e6d9bd4df7f6479"
   }
 }
