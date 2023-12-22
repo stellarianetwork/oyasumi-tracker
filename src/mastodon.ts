@@ -24,6 +24,8 @@ function joinNameAndEmoji(name: string, emoji: string[]) {
     return `${name} ${zwnbsp}${joinEmoji(emoji)}`;
 }
 
+const oyasumiName = '冬休み';
+
 export async function updateNameBreakInfoInName(breakInfo: BreakInfo) {
     const client = createClient();
     const { displayName: currentDisplayName } = await client.v1.accounts
@@ -33,14 +35,14 @@ export async function updateNameBreakInfoInName(breakInfo: BreakInfo) {
     if (
         breakInfo.humanReadableRemainingTime === null
     ) {
-        const displayName = joinNameAndEmoji(`夏休み 終了`, emoji);
+        const displayName = joinNameAndEmoji(`${oyasumiName} 終了`, emoji);
         await client.v1.accounts.updateCredentials({ displayName });
         return;
     }
 
     const displayName = joinNameAndEmoji(
         [
-            `夏休み`,
+            oyasumiName,
             `残${breakInfo.humanReadableRemainingTime}`,
             `(${(100 - breakInfo.elapsedPercentage).toFixed(0)}%)`,
         ].join(" "),
