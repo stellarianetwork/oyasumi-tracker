@@ -24,7 +24,7 @@ function joinNameAndEmoji(name: string, emoji: string[]) {
     return `${name} ${zwnbsp}${joinEmoji(emoji)}`;
 }
 
-const oyasumiName = '冬休み';
+const oyasumiName = "冬休み";
 
 export async function updateNameBreakInfoInName(breakInfo: BreakInfo) {
     const client = createClient();
