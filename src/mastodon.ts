@@ -33,7 +33,7 @@ export async function updateNameBreakInfoInName(breakInfo: BreakInfo) {
     const emoji = extractEmojiFromDisplayName(currentDisplayName);
 
     if (
-        breakInfo.humanReadableRemainingTime === null
+        breakInfo.elapsedPercentage === 100
     ) {
         const displayName = joinNameAndEmoji(`${oyasumiName} 終了`, emoji);
         await client.v1.accounts.updateCredentials({ displayName });
