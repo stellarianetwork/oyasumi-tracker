@@ -17,6 +17,7 @@ jobs:
       - name: Run
         run: deno task start
         env:
+          OYASUMI_NAME: ${{ vars.OYASUMI_NAME }}
           OYASUMI_START: ${{ vars.OYASUMI_START }}
           OYASUMI_END: ${{ vars.OYASUMI_END }}
           MASTODON_HOST: ${{ vars.MASTODON_HOST }}

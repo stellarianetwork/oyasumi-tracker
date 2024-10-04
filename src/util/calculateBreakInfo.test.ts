@@ -9,7 +9,12 @@ Deno.test(
         const end = new Date("2023-09-01T09:00:00");
         const currentDate = new Date("2023-08-01T00:00:00");
 
-        const breakInfo = calculateBreakInfo(start, end, currentDate);
+        const breakInfo = calculateBreakInfo({
+            name: "夏休み",
+            start,
+            end,
+            currentDate,
+        });
 
         assertEquals(breakInfo.remainingTime, end.getTime() - start.getTime());
         assertEquals(breakInfo.elapsedPercentage, 0);
@@ -24,7 +29,12 @@ Deno.test(
         const end = new Date("2023-09-01T09:00:00");
         const currentDate = new Date("2023-10-01T00:00:00");
 
-        const breakInfo = calculateBreakInfo(start, end, currentDate);
+        const breakInfo = calculateBreakInfo({
+            name: "夏休み",
+            start,
+            end,
+            currentDate,
+        });
 
         assertEquals(breakInfo.remainingTime, 0);
         assertEquals(breakInfo.elapsedPercentage, 100);
@@ -39,7 +49,12 @@ Deno.test(
         const end = new Date("2023-09-01T10:00:00");
         const currentDate = new Date("2023-09-01T05:00:00");
 
-        const breakInfo = calculateBreakInfo(start, end, currentDate);
+        const breakInfo = calculateBreakInfo({
+            name: "夏休み",
+            start,
+            end,
+            currentDate,
+        });
 
         assertEquals(
             breakInfo.remainingTime,

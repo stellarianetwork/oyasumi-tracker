@@ -15,6 +15,7 @@ function checkKeys<T>(o: { [K in keyof T]: T[K] | null | undefined }): {
 }
 
 const configKeyValue = checkKeys({
+    OYASUMI_NAME: Deno.env.get("OYASUMI_NAME"),
     OYASUMI_START: Deno.env.get("OYASUMI_START"),
     OYASUMI_END: Deno.env.get("OYASUMI_END"),
     MASTODON_HOST: Deno.env.get("MASTODON_HOST"),
